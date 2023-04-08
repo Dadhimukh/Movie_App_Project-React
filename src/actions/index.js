@@ -1,11 +1,3 @@
-// {
-// type: "ADD_MOVIES";
-// }
-// {
-// type: "DECREASE_COUNT";
-// }
-
-// action type
 export const ADD_MOVIES = "ADD_MOVIES";
 export const ADD_FAV = "ADD_FAV";
 
