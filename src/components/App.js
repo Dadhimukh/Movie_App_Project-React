@@ -9,32 +9,30 @@ class App extends React.Component {
   // dispatch function
   componentDidMount() {
     const { store } = this.props;
-    store.subscribe(()=>{
+    store.subscribe(() => {
       console.log("UPDATED");
       this.forceUpdate();
-    })
+    });
 
     // store.dispatch({
     //   type: "ADD_MOVIES",
     //   movies: data,
     // });
-    store.dispatch(addMovies(data))
+    store.dispatch(addMovies(data));
 
-          console.log("STATE", this.props.store.getState());
-
+    console.log("STATE", this.props.store.getState());
   }
 
-
-  isMovieFavourite = (movie)=>{
-    const {favourites} = this.props.store.getState()
+  isMovieFavourite = (movie) => {
+    const { favourites } = this.props.store.getState();
 
     const index = favourites.indexOf(movie);
-    if(index !== -1){
+    if (index !== -1) {
       // found the movie
-      return true
+      return true;
     }
-    return false
-  }
+    return false;
+  };
   render() {
     const { list } = this.props.store.getState();
 
