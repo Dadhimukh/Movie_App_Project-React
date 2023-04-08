@@ -1,15 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { createStore } from "redux";
 
-
-import './styles/index.css';
-import App from './components/App';
-import movies from './reducers';
-
+import "./styles/index.css";
+import App from "./components/App";
+import movies from "./reducers";
 
 const store = createStore(movies);
-console.log('store' , store);
+console.log("store", store);
 // console.log('BEFORE_STATE' , store.getState());
 
 // store.dispatch({
@@ -19,10 +17,7 @@ console.log('store' , store);
 
 // console.log("AFTER_STATE", store.getState());
 
-
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App store={store} />
