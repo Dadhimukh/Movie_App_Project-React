@@ -27,7 +27,9 @@ render() {
             >
                UnFavourite
             </button>
-         ) : (
+         )
+         :
+         (
             <button
                className="favourite-btn"
                onClick={this.handleFavouriteClick}
