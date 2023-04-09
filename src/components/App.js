@@ -5,8 +5,10 @@ import MovieCard from "./MovieCard";
 import { addMovies } from "../actions";
 
 class App extends React.Component {
+
   // make call api
   // dispatch function
+  
   componentDidMount() {
     const { store } = this.props;
     store.subscribe(() => {
@@ -18,6 +20,7 @@ class App extends React.Component {
     //   type: "ADD_MOVIES",
     //   movies: data,
     // });
+
     store.dispatch(addMovies(data));
 
     console.log("STATE", this.props.store.getState());
@@ -28,6 +31,7 @@ class App extends React.Component {
 
     const index = favourites.indexOf(movie);
     if (index !== -1) {
+
       // found the movie
       return true;
     }
